@@ -47,3 +47,20 @@ antibody bundle romkatv/powerlevel10k
 
 # To customize prompt, run `p10k configure` or edit ~/.home/.p10k.zsh.
 [[ ! -f ~/.home/.p10k.zsh ]] || source ~/.home/.p10k.zsh
+
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.home/.git-completion.bash
+# Load az completion
+autoload -U +X compinit && compinit
+source /usr/local/etc/bash_completion.d/az
+
+fpath=(~/.home $fpath)
+
+# Go path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# Setup python env
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
