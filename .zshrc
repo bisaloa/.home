@@ -50,9 +50,10 @@ antibody bundle romkatv/powerlevel10k
 
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/.home/.git-completion.bash
-# Load az completion
-autoload -U +X compinit && compinit
-source /usr/local/etc/bash_completion.d/az
+# Load docker completion
+ if [ -f /usr/local/etc/bash_completion ]; then
+ . /usr/local/etc/bash_completion
+ fi
 
 fpath=(~/.home $fpath)
 
@@ -64,3 +65,6 @@ export PATH=$PATH:$GOPATH/bin
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+alias ipython='python -m IPython'
+alias gf='git diff-tree --no-commit-id --name-only -r'
