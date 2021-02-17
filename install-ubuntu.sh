@@ -8,4 +8,9 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
     && apt-get update \
     && apt-get install -y kubectl
 
+# Install kubectx (Switch between Kubernetes contexts/namespaces)
+curl -sSL http://github.com/ahmetb/kubectx/archive/v0.9.1.tar.gz | tar -C /tmp -xz
+cp /tmp/kubectx-0.9.1/kubectx /usr/local/bin/kubectx
+cp /tmp/kubectx-0.9.1/kubens /usr/local/bin/kubens
+
 echo "ZDOTDIR=$HOME/.home" > $HOME/.zshenv
