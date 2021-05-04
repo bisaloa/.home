@@ -57,6 +57,9 @@ zstyle ':completion:*:*:git:*' script ~/.home/.git-completion.bash
 
 fpath=(~/.home $fpath)
 
+# disable test highlight on paste
+zle_highlight=('paste:none')
+
 # Go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
