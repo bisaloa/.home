@@ -79,6 +79,7 @@ alias ipython='python -m IPython'
 alias gf='git diff-tree --no-commit-id --name-only -r'
 alias glh='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all'
 alias k=kubectl
+alias gpo="git push origin --set-upstream"
 alias sudo='sudo '
 # complete -F __start_kubectl k
 
