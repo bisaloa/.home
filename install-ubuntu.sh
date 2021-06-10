@@ -13,4 +13,10 @@ curl -sSL http://github.com/ahmetb/kubectx/archive/v0.9.1.tar.gz | tar -C /tmp -
 cp /tmp/kubectx-0.9.1/kubectx /usr/local/bin/kubectx
 cp /tmp/kubectx-0.9.1/kubens /usr/local/bin/kubens
 
+# Install gh
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+apt-get update
+apt-get install gh
+
 echo "ZDOTDIR=$HOME/.home" > $HOME/.zshenv
