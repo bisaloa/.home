@@ -84,3 +84,6 @@ alias sudo='sudo '
 # complete -F __start_kubectl k
 
 echo "source ~/.home/.vimrc" >> ~/.vimrc
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word

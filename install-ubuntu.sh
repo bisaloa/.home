@@ -1,6 +1,6 @@
 apt-get update && apt-get -y install zsh curl git vim less ssh
 
-curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
+curl -sfL https://raw.githubusercontent.com/getantibody/installer/master/install | sh -s - -b /usr/local/bin
 
 # Install kubectl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
