@@ -83,4 +83,7 @@ alias gpo="git push origin --set-upstream"
 alias sudo='sudo '
 # complete -F __start_kubectl k
 
-echo "source ~/.home/.vimrc" >> ~/.vimrc
+# echo "source ~/.home/.vimrc" >> ~/.vimrc
+
+export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
